@@ -1,13 +1,22 @@
-import { useEffect } from "react"
-import { getCabins } from "../services/api-cabins"
+import CabinTable from "../features/cabins/CabinTable"
+import Row from "../ui/Row"
+import Heading from "../ui/Heading"
+import AddCabin from "../features/cabins/AddCabin"
+import CabinTableOperations from "../features/cabins/CabinTableOperations"
+
 
 export default function Cabins() {
-  useEffect(function () {
-    getCabins().then(data => console.log(data));
-  })
+  
   return (
-    <div>
-      
-    </div>
+    <>
+      <Row type="horizontal">
+        <Heading as="h1">All Cabins</Heading>
+        <CabinTableOperations/>
+      </Row>
+      <Row>
+        <CabinTable />
+        <AddCabin/>
+      </Row>
+    </>
   )
 }

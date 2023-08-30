@@ -1,9 +1,9 @@
-
+import Heading from "../ui/Heading";
+import SignupForm from "../features/authentication/SignupForm"
 
 export default function Users() {
-  return (
-    <div>
-      users
-    </div>
-  )
+  return <>
+    <Heading as="h1" >Create A New User</Heading>
+    <SignupForm/>
+  </>
 }
